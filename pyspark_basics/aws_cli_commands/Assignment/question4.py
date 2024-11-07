@@ -1,3 +1,8 @@
+''' To better understand purchasing behavior, load customer data from DynamoDB and join it
+ with sales data from S3. Use PySpark to calculate the time intervals between each purchase 
+ or individual customers, then find the average transaction interval to identify 
+ high-engagement customers.
+ '''
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, unix_timestamp, lag
 from pyspark.sql.window import Window
